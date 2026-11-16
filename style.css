@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #3b4a57;
+    background: #d9ebf8;
+}
+
+header {
+    background: #8bb6d8;
+    min-height: 90px;
+    border-radius: 0 0 25px 5px;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.menu {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nome {
+    font-size: 29px;
+    font-weight: 700;
+    color: #263f54;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    color: #263f54;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.links a:hover, .texto a:hover {
+    color: #1766a4;
+}
+
+.sessao {
+    padding: 75px 0;
+}
+
+.azul {
+    background: #d9ebf8;
+}
+
+.branca {
+    background: white;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.texto {
+    flex: 1;
+    max-width: 480px;
+}
+
+h1, h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 0 0 20px;
+    font-weight: 600;
+    color: #3b4a57;
+}
+
+.texto p, .texto li, .centro p {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.texto p {
+    text-align: justify;
+}
+
+.texto ol {
+    padding-left: 22px;
+}
+
+.texto li {
+    margin-bottom: 8px;
+}
+
+.texto a {
+    color: #22689c;
+}
+
+.fotos-sobre {
+    position: relative;
+    width: 370px;
+    height: 350px;
+    flex-shrink: 0;
+}
+
+.fotos-sobre img, .foto img {
+    object-fit: cover;
+    border: 2px solid #364755;
+    border-radius: 18px;
+}
+
+.foto-principal {
+    position: absolute;
+    width: 245px;
+    height: 300px;
+    left: 55px;
+    top: 18px;
+    transform: rotate(-6deg);
+}
+
+.foto-secundaria {
+    position: absolute;
+    width: 155px;
+    height: 165px;
+    right: 0;
+    top: 0;
+    transform: rotate(9deg);
+}
+
+.foto-terceira {
+    position: absolute;
+    width: 155px;
+    height: 165px;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-4deg);
+}
+
+.foto {
+    width: 275px;
+    height: 330px;
+    flex-shrink: 0;
+    transform: rotate(-5deg);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+}
+
+.centro {
+    text-align: center;
+}
+
+.centro > p {
+    margin-top: -8px;
+    margin-bottom: 32px;
+}
+
+.galeria {
+    display: grid;
+    gap: 25px;
+}
+
+.tres {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quatro {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #3b4a57;
+    font-weight: 500;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border: 2px solid #364755;
+    border-radius: 18px;
+    transition: transform 0.2s ease;
+}
+
+.item:hover img {
+    transform: translateY(-5px);
+}
+
+.item span {
+    font-size: 14px;
+}
+
+footer {
+    background: #8bb6d8;
+    border-radius: 25px 5px 0 0;
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .conteudo {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .fotos-sobre {
+        max-width: 100%;
+    }
+
+    .quatro, .tres {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .links {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .sessao {
+        padding: 50px 0;
+    }
+
+    h1, h2 {
+        font-size: 25px;
+    }
+
+    .fotos-sobre {
+        width: 310px;
+    }
+
+    .foto-principal {
+        left: 20px;
+    }
+
+    .quatro, .tres {
+        grid-template-columns: 1fr;
+    }
+
+    .item img {
+        height: 230px;
+    }
+}
